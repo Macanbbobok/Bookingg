@@ -1,11 +1,20 @@
-@import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-@source '../**/*.blade.php';
-@source '../**/*.js';
+/* Custom styles for calendar */
+.calendar-event-dinas {
+    @apply bg-green-100 border border-green-300 text-green-800;
+}
 
-@theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+.calendar-event-approved {
+    @apply bg-blue-100 border border-blue-300 text-blue-800;
+}
+
+.calendar-event-pending {
+    @apply bg-yellow-100 border border-yellow-300 text-yellow-800;
+}
+
+.calendar-event-rejected {
+    @apply bg-red-100 border border-red-300 text-red-800;
 }
